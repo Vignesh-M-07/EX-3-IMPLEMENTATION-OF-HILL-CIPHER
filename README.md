@@ -26,14 +26,13 @@ Step 3:
 
 ## PROGRAM:
 
-#include <stdio.h>
-#include <string.h>
-#include <ctype.h>
+     #include <stdio.h>
+     #include <string.h>
+     #include <ctype.h>
+     #define SIZE 3  
 
-#define SIZE 3  
 
-
-void multiplyMatrix(int key[SIZE][SIZE], int text[SIZE], int result[SIZE]) {
+    void multiplyMatrix(int key[SIZE][SIZE], int text[SIZE], int result[SIZE]) {
     for (int i = 0; i < SIZE; i++) {
         result[i] = 0;
         for (int j = 0; j < SIZE; j++) {
@@ -41,9 +40,9 @@ void multiplyMatrix(int key[SIZE][SIZE], int text[SIZE], int result[SIZE]) {
         }
         result[i] = result[i] % 26;
     }
-}
+    }
 
-int main() {
+    int main() {
 
     char plainText[100];
     int key[SIZE][SIZE];
